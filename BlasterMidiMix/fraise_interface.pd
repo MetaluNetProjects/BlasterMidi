@@ -1,0 +1,281 @@
+#N canvas 896 86 1024 619 10;
+#X declare -path Fraise -stdpath Fraise;
+#X declare -path Fraise-master -stdpath Fraise-master;
+#X declare -path MidiMixAkai;
+#X obj 13 11 declare -path Fraise -stdpath Fraise;
+#X obj 21 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 59 115 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 96 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 134 115 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 174 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 212 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 249 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 286 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 325 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 456 273 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 500 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 479 294 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 520 341 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 559 387 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 540 362 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 582 410 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 626 458 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 606 436 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 520 341 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 329 159 s Shift-rcv;
+#N canvas 916 686 450 300 INDICATOR 0;
+#X obj 258 32 r INDICATOR;
+#X obj 258 54 b;
+#X obj 258 100 s INDICATOR_RESTORE;
+#X obj 258 75 del 1000;
+#X obj 164 136 clone -s 1 9 INDICATORLED;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X restore 349 43 pd INDICATOR;
+#X obj 20 199 AbsPlay 1;
+#X obj 48 165 AbsPlay 2;
+#X obj 71 138 AbsPlay 3;
+#X obj 134 178 AbsPlay 4;
+#X obj 152 139 AbsPlay 5;
+#X obj 363 137 AbsPlay 9;
+#X obj 454 250 AbsLed 1;
+#X obj 501 295 AbsLed 3;
+#X obj 479 272 AbsLed 2;
+#X obj 520 318 AbsLed 4;
+#X obj 559 364 AbsLed 6;
+#X obj 540 340 AbsLed 5;
+#X obj 581 387 AbsLed 7;
+#X obj 605 413 AbsLed 8;
+#X obj 196 491 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 13 38 declare -path Fraise-master -stdpath Fraise-master;
+#X obj 243 9 declare -path MidiMixAkai;
+#X obj 22 63 r MidiMix-snd;
+#X obj 25 262 route fader1 fader2 fader3 fader4 fader5 fader6 fader7
+fader8 master, f 68;
+#X obj 25 234 r MidiMix-snd;
+#X obj 25 286 AbsVol 1;
+#X obj 86 314 AbsVol 2;
+#X obj 86 287 AbsVol 3;
+#X obj 152 295 AbsVol 4;
+#X obj 293 322 AbsVol 7;
+#X obj 319 293 AbsVol 8;
+#X obj 577 491 AbsVol 9;
+#X obj 909 411 AbsFX 7;
+#X obj 939 442 AbsFX 8;
+#X obj 575 519 AbsFX 9;
+#X obj 214 160 AbsPlay 6;
+#X obj 234 136 AbsPlay 7;
+#X obj 301 187 AbsPlay 8;
+#X obj 214 318 AbsVol 5;
+#X obj 755 406 AbsFX 1;
+#X obj 236 293 AbsVol 6;
+#X obj 678 565 AbsSel 2;
+#X obj 709 535 AbsSel 3;
+#X obj 765 426 AbsFX 2;
+#X obj 785 449 AbsFX 3;
+#X obj 796 469 AbsFX 4;
+#X obj 854 417 AbsFX 5;
+#X obj 867 446 AbsFX 6;
+#X obj 646 537 AbsSel 1;
+#X obj 334 496 AbsVol 456;
+#X obj 308 520 AbsVol 123;
+#X obj 380 294 AbsVol Gen;
+#X obj 740 563 AbsSel 4;
+#X obj 770 533 AbsSel 5;
+#X obj 804 561 AbsSel 6;
+#X obj 837 536 AbsSel 7;
+#X obj 871 564 AbsSel 8;
+#X obj 313 430 r MidiMix-snd;
+#X obj 313 457 route A1 A2 A3 A4 A5 A6 A7 A8, f 46;
+#X obj 656 471 r MidiMix-snd;
+#X obj 654 498 route B1 B2 B3 B4 B5 B6 B7 B8, f 31;
+#X obj 756 350 r MidiMix-snd;
+#X obj 757 374 route C1 C2 C3 C4 C5 C6 C7 C8, f 32;
+#X obj 361 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 196 469 r LedTempo;
+#X obj 196 532 s MidiMix-rcv;
+#X msg 196 511 right \$1;
+#X obj 392 566 s AX-x;
+#X obj 447 571 s AX-y;
+#X obj 490 571 s AX-z;
+#X obj 390 544 f;
+#X obj 448 544 f;
+#X obj 490 547 f;
+#X obj 508 514 metro 20;
+#X obj 508 492 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 23 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 56 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 89 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 123 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 156 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 189 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 223 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 256 397 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 22 345 r MidiMix-snd;
+#X obj 22 89 route mute1 mute2 mute3 mute4 mute5 mute6 mute7 mute8
+solo left, f 64;
+#X obj 23 370 route rec1 rec2 rec3 rec4 rec5 rec6 rec7 rec8;
+#X obj 625 436 AbsLedLeft 9;
+#N canvas 0 686 450 300 AllRecOff 0;
+#X obj 85 2 inlet;
+#X msg 89 130 rec1 \$1;
+#X obj 106 268 s MidiMix-rcv;
+#X msg 101 155 rec2 \$1;
+#X msg 116 177 rec3 \$1;
+#X msg 128 202 rec4 \$1;
+#X msg 167 141 rec5 \$1;
+#X msg 179 166 rec6 \$1;
+#X msg 194 188 rec7 \$1;
+#X msg 206 213 rec8 \$1;
+#X msg 129 67 0;
+#X obj 122 35 sel 1;
+#X connect 0 0 11 0;
+#X connect 1 0 2 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 0;
+#X connect 10 0 1 0;
+#X connect 10 0 9 0;
+#X connect 10 0 8 0;
+#X connect 10 0 7 0;
+#X connect 10 0 6 0;
+#X connect 10 0 5 0;
+#X connect 10 0 4 0;
+#X connect 10 0 3 0;
+#X connect 11 0 10 0;
+#X restore 400 202 pd AllRecOff;
+#X obj 18 474 l Solo 2 3 4 5 6 7 8 1;
+#X obj 18 494 l Solo 3 4 5 6 7 8 1 2;
+#X obj 18 514 l Solo 4 5 6 7 8 1 2 3;
+#X obj 18 534 l Solo 5 6 7 8 1 2 3 4;
+#X obj 18 554 l Solo 6 7 8 1 2 3 4 5;
+#X obj 18 574 l Solo 7 8 1 2 3 4 5 6;
+#X obj 18 594 l Solo 8 1 2 3 4 5 6 7;
+#X obj 17 454 l Solo 1 2 3 4 5 6 7 8;
+#X obj 567 22 MidiMixSoloOn-Off \$1 \$2 \$3;
+#X obj 457 70 r bb-bouton3;
+#X obj 345 476 * 0.3;
+#X connect 1 0 22 0;
+#X connect 2 0 23 0;
+#X connect 3 0 24 0;
+#X connect 4 0 25 0;
+#X connect 5 0 26 0;
+#X connect 6 0 52 0;
+#X connect 7 0 53 0;
+#X connect 8 0 54 0;
+#X connect 9 0 20 0;
+#X connect 9 0 104 0;
+#X connect 28 0 10 0;
+#X connect 29 0 11 0;
+#X connect 30 0 12 0;
+#X connect 31 0 13 0;
+#X connect 32 0 14 0;
+#X connect 33 0 15 0;
+#X connect 34 0 16 0;
+#X connect 35 0 18 0;
+#X connect 36 0 83 0;
+#X connect 39 0 101 0;
+#X connect 40 0 42 0;
+#X connect 40 1 43 0;
+#X connect 40 2 44 0;
+#X connect 40 3 45 0;
+#X connect 40 4 55 0;
+#X connect 40 5 57 0;
+#X connect 40 6 46 0;
+#X connect 40 7 47 0;
+#X connect 40 8 68 0;
+#X connect 41 0 40 0;
+#X connect 74 0 75 0;
+#X connect 75 0 67 0;
+#X connect 75 1 115 0;
+#X connect 75 3 87 0;
+#X connect 75 4 88 0;
+#X connect 75 5 89 0;
+#X connect 75 6 51 0;
+#X connect 75 7 48 0;
+#X connect 76 0 77 0;
+#X connect 77 0 65 0;
+#X connect 77 1 58 0;
+#X connect 77 2 59 0;
+#X connect 77 3 69 0;
+#X connect 77 4 70 0;
+#X connect 77 5 71 0;
+#X connect 77 6 72 0;
+#X connect 77 7 73 0;
+#X connect 78 0 79 0;
+#X connect 79 0 56 0;
+#X connect 79 1 60 0;
+#X connect 79 2 61 0;
+#X connect 79 3 62 0;
+#X connect 79 4 63 0;
+#X connect 79 5 64 0;
+#X connect 79 6 49 0;
+#X connect 79 7 50 0;
+#X connect 80 0 27 0;
+#X connect 81 0 36 0;
+#X connect 83 0 82 0;
+#X connect 87 0 84 0;
+#X connect 88 0 85 0;
+#X connect 89 0 86 0;
+#X connect 90 0 89 0;
+#X connect 90 0 88 0;
+#X connect 90 0 87 0;
+#X connect 91 0 90 0;
+#X connect 100 0 102 0;
+#X connect 101 0 1 0;
+#X connect 101 1 2 0;
+#X connect 101 2 3 0;
+#X connect 101 3 4 0;
+#X connect 101 4 5 0;
+#X connect 101 5 6 0;
+#X connect 101 6 7 0;
+#X connect 101 7 8 0;
+#X connect 101 8 9 0;
+#X connect 101 9 80 0;
+#X connect 102 0 92 0;
+#X connect 102 1 93 0;
+#X connect 102 2 94 0;
+#X connect 102 3 95 0;
+#X connect 102 4 96 0;
+#X connect 102 5 97 0;
+#X connect 102 6 98 0;
+#X connect 102 7 99 0;
+#X connect 103 0 17 0;
+#X connect 114 0 80 0;
+#X connect 115 0 66 0;
+#X coords 0 -1 1 1 401 300 1 565 5;

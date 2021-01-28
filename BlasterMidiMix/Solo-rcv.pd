@@ -1,0 +1,32 @@
+#N canvas 916 686 450 300 10;
+#X msg 163 105 set \$1;
+#X msg 163 127 rec2;
+#X obj 132 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X symbolatom 57 67 10 0 0 0 - - -;
+#X obj 163 149 pack s f;
+#X obj 313 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 315 83 t b f;
+#X obj 163 194 s MidiMix-rcv;
+#X obj 163 171 route list;
+#X obj 163 51 loadbang;
+#X obj 162 72 makesymbol rec\$1;
+#X obj 313 41 inlet;
+#X obj 280 158 r MidiMix-snd;
+#X obj 280 209 outlet;
+#X obj 280 184 route rec\$1;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 10 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 6 1 4 1;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 10 0 3 0;
+#X connect 11 0 5 0;
+#X connect 12 0 14 0;
+#X connect 14 0 13 0;

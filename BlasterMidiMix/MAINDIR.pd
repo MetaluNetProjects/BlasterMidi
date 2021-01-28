@@ -1,0 +1,23 @@
+#N canvas 754 667 450 383 10;
+#X obj 128 55 loadbang;
+#X obj 128 77 del 500;
+#X symbolatom 128 121 0 0 0 0 - - -;
+#X obj 97 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 128 99 getdir 2;
+#X obj 131 197 r KEP_MAINDIR;
+#X msg 131 219 symbol \$1/KEPSETTINGS;
+#X obj 130 158 s KEP_MAINDIR;
+#X obj 131 243 s KEP_SETTINGSDIR;
+#X obj 130 276 r KEP_MAINDIR;
+#X msg 130 298 symbol \$1/DATAS;
+#X obj 130 322 s KEP_DATASDIR;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
