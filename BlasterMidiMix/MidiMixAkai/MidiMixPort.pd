@@ -1,0 +1,3 @@
+#N canvas 374 767 471 344 10;
+#X obj 22 18 MidiMix 33;
+#X text 40 308 port1:1 \, port2:17 \, port3:33 \, etc...;

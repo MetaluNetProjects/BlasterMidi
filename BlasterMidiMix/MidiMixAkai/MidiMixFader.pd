@@ -1,0 +1,45 @@
+#N canvas 311 905 283 258 10;
+#X obj 117 32 / 127;
+#X msg 145 131 color 14 22 0;
+#X msg 118 108 color 10 11 10;
+#N canvas 944 765 276 217 route-Mode 0;
+#X obj 17 25 inlet;
+#X obj 17 84 pack s f;
+#X msg 17 105 \$1 \$2;
+#X obj 76 38 loadbang;
+#X obj 138 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 17 53 t b f;
+#X obj 76 57 makesymbol \$3;
+#X obj 16 133 s MidiMix-snd;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 1 0;
+#X connect 5 1 1 1;
+#X connect 6 0 1 0;
+#X restore 171 58 pd route-Mode;
+#X obj 1 11 cnv 15 42 108 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X msg 68 55 set \$1;
+#X obj 12 19 vsl 20 80 0 1 0 0 \$0-fader-snd \$0-fader-rcv \$3 -8 90
+0 10 -233017 -128992 -233017 7900 1;
+#X obj 117 10 ctlin \$1 \$2;
+#X obj 118 158 s \$0-fader-rcv;
+#X obj 118 61 t b b;
+#X obj 118 84 del 100;
+#X text 1 138 arg1:midi-ctl \; arg2:midi_canal \; arg3:nom \;;
+#X connect 0 0 3 0;
+#X connect 0 0 5 0;
+#X connect 0 0 9 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 0 0;
+#X connect 9 0 10 0;
+#X connect 9 1 1 0;
+#X connect 10 0 2 0;
+#X coords 0 -1 1 1 44 110 2 0 10;
