@@ -1,0 +1,13 @@
+gain-IN-1 0.444444 0;
+hp-IN-1 1 0;
+on-IN-1 1 0;
+on-MONITOR 0 0;
+on-MASTER 1 0;
+MONITORVOL_max 0.797872 0;
+MONITORVOL 0.768354 0;
+MASTERVOL_max 1 0;
+MASTERVOL 1 0;
+vol-OUT-2 1 0;
+on-OUT-2 1 0;
+vol-OUT-1 1 0;
+on-OUT-1 1 0;
