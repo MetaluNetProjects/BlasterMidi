@@ -1,4 +1,4 @@
-#N canvas 2035 909 612 679 10;
+#N canvas 2025 909 612 679 10;
 #X declare -path absGAMME -path ../absGAMME;
 #X declare -stdpath SyncJams/pure-data -stdpath moonlib;
 #X declare -lib moonlib -path moonlib;
@@ -187,7 +187,7 @@
 #X restore 183 544 pd change;
 #X obj 89 367 ndmetro 128 1;
 #X obj 28 164 Carabiner/Carabiner;
-#N canvas 1420 1048 450 300 abl_link~ 1;
+#N canvas 1410 1040 450 300 abl_link~ 0;
 #X obj 56 21 inlet;
 #X msg 321 72 tempo \$1;
 #X msg 110 73 resolution \$1;
@@ -209,6 +209,8 @@
 #X obj 326 114 r #abl_link_num_peers;
 #X obj 297 239 s /BPM;
 #X obj 59 239 outlet;
+#X obj 7 4 loadbang;
+#X msg 7 27 1;
 #X connect 0 0 11 0;
 #X connect 1 0 10 0;
 #X connect 2 0 10 0;
@@ -227,6 +229,8 @@
 #X connect 14 0 2 0;
 #X connect 15 0 10 0;
 #X connect 17 0 16 0;
+#X connect 20 0 21 0;
+#X connect 21 0 9 0;
 #X restore 172 173 pd abl_link~;
 #X floatatom 226 215 5 0 0 0 - - -;
 #X connect 0 0 1 0;
