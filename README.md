@@ -9,14 +9,22 @@ Install Pd.
 
 From Pd, install externals:
 
-- pof
 - zexy
 - creb
 - moonlib
 - iemlib
-- cyclone
+- motex
 - maxlib
+- hcs
+- moocow
 - abl_link~
+- readdir
+- flatgui
+- cxc
+- mrpeach
+- ggee
+- osc
+- pd-autotuned-master
 
 Clone project:
 ```
