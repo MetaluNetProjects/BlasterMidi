@@ -28,7 +28,7 @@ From Pd, install externals:
 
 Clone project:
 ```
-git clone https://github.com/MetaluNetProjects/Schoolscape
+git clone https://github.com/MetaluNetProjects/BlasterMidi
 ```
 
 Open BlasterMidiMix/00BlasterMAIN.pd
